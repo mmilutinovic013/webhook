@@ -6,10 +6,10 @@ dependencies[] = ctools
 dependencies[] = webhook
 features[ctools][] = webhook:webhook:1
 features[features_api][] = api:1
-features[webhook][] = github
+features[webhook][] = slack
 
-files[] = plugins/processor/Webhook_Example_Plugins_Processor_GithubLog.class.inc
-files[] = plugins/unserializer/Webhook_Example_Plugins_Unserializer_Github.class.inc
+files[] = plugins/processor/Webhook_Example_Plugins_Processor_SlackHook.class.inc
+files[] = plugins/unserializer/Webhook_Example_Plugins_Unserializer_Slack.class.inc
 
 ; Information added by Drupal.org packaging script on 2014-09-19
 version = "7.x-1.0-alpha3"

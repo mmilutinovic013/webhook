@@ -10,7 +10,7 @@
  *
  * Records github actions in watchdog log.
  */
-class Webhook_Example_Plugins_Processor_GithubLog implements Webhook_Plugins_Processor_Interface {
+class Webhook_Example_Plugins_Processor_SlackHook implements Webhook_Plugins_Processor_Interface {
 
   /**
    * Configuration form.

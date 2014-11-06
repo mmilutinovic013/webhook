@@ -23,12 +23,12 @@ function webhook_example_webhook_processor() {
   $path = drupal_get_path('module', 'webhook_example') . '/plugins/processor';
   $plugins = array();
 
-  $plugins['githublog'] = array(
+  $plugins['slackhook'] = array(
     'title' => t('Slack Integrator'),
     'processor' => array(
       'path' => $path,
-      'file' => 'Webhook_Example_Plugins_Processor_GithubLog.class.inc',
-      'class' => 'Webhook_Example_Plugins_Processor_GithubLog',
+      'file' => 'Webhook_Example_Plugins_Processor_SlackHook.class.inc',
+      'class' => 'Webhook_Example_Plugins_Processor_SlackHook',
     ),
   );
 
@@ -43,12 +43,12 @@ function webhook_example_webhook_unserializer() {
   $path = drupal_get_path('module', 'webhook_example') . '/plugins/unserializer';
   $plugins = array();
 
-  $plugins['github'] = array(
-    'title' => t('GitHub'),
+  $plugins['slack'] = array(
+    'title' => t('Slack'),
     'unserializer' => array(
       'path' => $path,
-      'file' => 'Webhook_Example_Plugins_Unserializer_Github.class.inc',
-      'class' => 'Webhook_Example_Plugins_Unserializer_Github',
+      'file' => 'Webhook_Example_Plugins_Unserializer_Slack.class.inc',
+      'class' => 'Webhook_Example_Plugins_Unserializer_Slack',
     ),
   );
 
