@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * webhook_example.webhook.inc
+ * webhook_slack.webhook.inc
  */
 
 /**
  * Implements hook_webhook_default_config().
  */
-function webhook_example_webhook_default_config() {
+function webhook_slack_webhook_default_config() {
   $export = array();
 
   $webhook = new stdClass();
