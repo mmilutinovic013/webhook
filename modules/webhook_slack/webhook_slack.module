@@ -4,7 +4,7 @@
  * Code for the Webhook Example feature.
  */
 
-include_once 'webhook_example.features.inc';
+include_once 'webhook_slack.features.inc';
 
 /**
  * Implements hook_ctools_plugin_directory().
