@@ -14,7 +14,7 @@ function webhook_example_webhook_default_config() {
   $webhook->disabled = FALSE; /* Edit this to true to make a default webhook disabled initially */
   $webhook->api_version = 1;
   $webhook->whid = '1';
-  $webhook->title = 'Slack Example';
+  $webhook->title = 'Slack Webhook';
   $webhook->machine_name = 'slack';
   $webhook->description = 'Example webhook for creating logging slack messages.';
   $webhook->unserializer = 'slack';

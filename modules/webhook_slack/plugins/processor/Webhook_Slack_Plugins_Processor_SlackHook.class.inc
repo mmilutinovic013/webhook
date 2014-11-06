@@ -10,7 +10,7 @@
  *
  * Records github actions in watchdog log.
  */
-class Webhook_Example_Plugins_Processor_GithubLog implements Webhook_Plugins_Processor_Interface {
+class Webhook_Example_Plugins_Processor_SlackHook implements Webhook_Plugins_Processor_Interface {
 
   /**
    * Configuration form.
@@ -25,11 +25,11 @@ class Webhook_Example_Plugins_Processor_GithubLog implements Webhook_Plugins_Pro
    */
   public function process(stdClass $data) {
     $level = WATCHDOG_INFO;
-    $message = 'New push to <a href="@repository_url">@repository_name</a>/@ref by @pusher_name (@pusher_email). <a href="@compare">View diff on github</a>.';
+    //$message = 'New push to <a href="@repository_url">@repository_name</a>/@ref by @pusher_name (@pusher_email). <a href="@compare">View diff on github</a>.';
 
     if ($data->forced) {
       $level = WATCHDOG_WARNING;
-      $message = 'Forced push to <a href="@repository_url">@repository_name</a>/@ref by @pusher_name (@pusher_email). <a href="@compare">View diff on github</a>.';
+      //$message = 'Forced push to <a href="@repository_url">@repository_name</a>/@ref by @pusher_name (@pusher_email). <a href="@compare">View diff on github</a>.';
     }
 
     $vars = array(
@@ -41,6 +41,6 @@ class Webhook_Example_Plugins_Processor_GithubLog implements Webhook_Plugins_Pro
       '@compare' => $data->compare,
     );
 
-    return watchdog('webhook_github_logger', $message, $vars, $level, $data->compare);
+    return 1;//watchdog('webhook_github_logger', $message, $vars, $level, $data->compare);
   }
 }
