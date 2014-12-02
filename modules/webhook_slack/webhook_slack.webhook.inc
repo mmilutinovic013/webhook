@@ -16,7 +16,7 @@ function webhook_slack_webhook_default_config() {
   $webhook->whid = '1';
   $webhook->title = 'Slack Webhook';
   $webhook->machine_name = 'slack';
-  $webhook->description = 'Example webhook for creating logging slack messages.';
+  $webhook->description = 'Example webhook for creating logwebng slack messages.';
   $webhook->unserializer = 'slack';
   $webhook->processor = 'slackhook';
   $webhook->config = '';

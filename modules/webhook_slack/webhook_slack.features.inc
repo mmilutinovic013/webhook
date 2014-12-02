@@ -14,7 +14,7 @@ function webhook_slack_ctools_plugin_api() {
   }
 }
 
-function slack_feature_eck_entity_type_info() {
+function webhook_slack_feature_eck_entity_type_info() {
   $items = array(
     'slack_integration' => array(
       'name' => 'slack_integration',

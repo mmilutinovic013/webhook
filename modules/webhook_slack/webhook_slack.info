@@ -10,9 +10,4 @@ features[webhook][] = slack
 
 files[] = plugins/processor/Webhook_Slack_Plugins_Processor_SlackHook.class.inc
 
-; Information added by Drupal.org packaging script on 2014-09-19
-version = "7.x-1.0-alpha3"
-core = "7.x"
-project = "webhook"
-datestamp = "1411118631"
 
