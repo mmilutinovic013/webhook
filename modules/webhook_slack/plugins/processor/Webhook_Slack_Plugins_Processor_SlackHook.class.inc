@@ -40,7 +40,19 @@ class Webhook_Slack_Plugins_Processor_SlackHook implements Webhook_Plugins_Proce
       '@pusher_email' => $data->pusher->email,
       '@compare' => $data->compare,
     );
-    print_r("here");
+
+    $entity_property_value_array = array();
+    $entity_property_value_array['channel_name'] = ;
+    $entity_property_value_array['text'] = ; 
+    $entity_property_value_array['user_name'] = ;
+    $entity = entity_create($entity_type_name, $entity_property_value_array);
+    $entity->save();
+    //
+    //
+    //
+    //
+    // hook_entity_insert
+    // 
     return watchdog('slackhook', $message, $vars, $level, $data->compare);
   }
 }
