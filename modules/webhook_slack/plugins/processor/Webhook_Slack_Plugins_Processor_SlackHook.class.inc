@@ -40,7 +40,7 @@ class Webhook_Slack_Plugins_Processor_SlackHook implements Webhook_Plugins_Proce
       '@pusher_email' => $data->pusher->email,
       '@compare' => $data->compare,
     );
-
+    print_r("here");
     return watchdog('slackhook', $message, $vars, $level, $data->compare);
   }
 }
