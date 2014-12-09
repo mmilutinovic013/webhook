@@ -42,9 +42,9 @@ class Webhook_Slack_Plugins_Processor_SlackHook implements Webhook_Plugins_Proce
     );
 
     $entity_property_value_array = array();
-    $entity_property_value_array['channel_name'] = ;
-    $entity_property_value_array['text'] = ; 
-    $entity_property_value_array['user_name'] = ;
+    $entity_property_value_array['channel_name'] = $_POST['channel_name'];
+    $entity_property_value_array['text'] = $_POST['text']; 
+    $entity_property_value_array['user_name'] =$_POST['user_name'];
     $entity = entity_create($entity_type_name, $entity_property_value_array);
     $entity->save();
     //
