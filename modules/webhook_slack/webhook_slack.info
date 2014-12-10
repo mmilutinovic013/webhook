@@ -9,5 +9,3 @@ features[features_api][] = api:1
 features[webhook][] = slack
 
 files[] = plugins/processor/Webhook_Slack_Plugins_Processor_SlackHook.class.inc
-
-
