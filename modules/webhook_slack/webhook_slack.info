@@ -4,6 +4,7 @@ core = 7.x
 package = Features
 dependencies[] = ctools
 dependencies[] = webhook
+dependencies[] = slack_entity
 features[ctools][] = webhook:webhook:1
 features[features_api][] = api:1
 features[webhook][] = slack
