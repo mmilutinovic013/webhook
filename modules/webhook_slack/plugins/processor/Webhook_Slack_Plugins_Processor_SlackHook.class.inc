@@ -49,6 +49,7 @@ class Webhook_Slack_Plugins_Processor_SlackHook implements Webhook_Plugins_Proce
     $the_slack_entity->save();
     dpm($message);
     dpm($the_slack_entity);
+    dpm("Ham");
 
     return $the_slack_entity;
   }
