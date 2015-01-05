@@ -33,26 +33,23 @@ class Webhook_Slack_Plugins_Processor_SlackHook implements Webhook_Plugins_Proce
     }
 
     $vars = array(
-      '@repository_url' => $data->repository->url,
-      '@repository_name' => $data->repository->name,
-      '@ref' => $data->ref,
-      '@pusher_name' => $data->pusher->name,
-      '@pusher_email' => $data->pusher->email,
-      '@compare' => $data->compare,
+      'seid' => $data->token,
+      'created' => $data->timestamp,
+      'team_id' => $data->team_id,
+      'channel_id' => $data->channel_id,
+      'channel_name' => $data->channel_name,
+      'timestamp' => $data->timestamp,
+      'user_id' => $data->user_id,
+      'user_name' => $data->user_name,
+      'text' => $data->text,
+      'trigger_word' => $data->trigger_word,
     );
 
-    $entity_property_value_array = array();
-    $entity_property_value_array['channel_name'] = $_POST['channel_name'];
-    $entity_property_value_array['text'] = $_POST['text']; 
-    $entity_property_value_array['user_name'] =$_POST['user_name'];
-    $entity = entity_create($entity_type_name, $entity_property_value_array);
-    $entity->save();
-    //
-    //
-    //
-    //
-    // hook_entity_insert
-    // 
+    $the_slack_entity = entity_create('slack_entity', $vars);
+    $the_slack_entity->save();
+    dpm($the_slack_entity);
+
+
     return watchdog('slackhook', $message, $vars, $level, $data->compare);
   }
 }
