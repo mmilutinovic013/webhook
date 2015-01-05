@@ -41,9 +41,8 @@ class Webhook_Slack_Plugins_Processor_SlackHook implements Webhook_Plugins_Proce
     $the_slack_entity = entity_create('slack_entity', $vars);
     $the_slack_entity->save();
 
-    dpm($message);
-    dpm($the_slack_entity);
-    dpm("Ham");
+    watchdog("debug", serialize($the_slack_entity));
+    watchdog("debug", serialize($vars));
 
     return $the_slack_entity;
   }
