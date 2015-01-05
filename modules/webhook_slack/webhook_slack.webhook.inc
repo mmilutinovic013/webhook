@@ -11,7 +11,7 @@ function webhook_slack_webhook_default_config() {
   $export = array();
 
   $webhook = new stdClass();
-  $webhook->disabled = FALSE; /* Edit this to true to make a default webhook disabled initially */
+  $webhook->disabled = TRUE; /* Edit this to true to make a default webhook disabled initially */
   $webhook->api_version = 1;
   $webhook->whid = '1';
   $webhook->title = 'Slack Webhook';
