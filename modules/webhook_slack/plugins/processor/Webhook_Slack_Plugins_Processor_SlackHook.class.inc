@@ -38,10 +38,10 @@ class Webhook_Slack_Plugins_Processor_SlackHook implements Webhook_Plugins_Proce
       'trigger_word' => $data->trigger_word,
     );
 
-    $the_slack_entity = entity_create('slack_entity', $vars);
-    $the_slack_entity->save();
+    // $the_slack_entity = entity_create('slack_entity', $vars);
+    // $the_slack_entity->save();
 
-    watchdog("debug", serialize($the_slack_entity));
+    // watchdog("debug", serialize($the_slack_entity));
     watchdog("debug", serialize($vars));
 
     return $the_slack_entity;
